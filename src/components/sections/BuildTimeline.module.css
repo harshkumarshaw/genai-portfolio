@@ -60,7 +60,7 @@
 }
 
 .left .marker {
-  right: calc(var(--space-xl) * -1);
+  right: 0;
   transform: translateX(50%);
 }
 
