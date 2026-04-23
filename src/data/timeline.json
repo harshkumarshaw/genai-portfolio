@@ -1,0 +1,82 @@
+[
+  {
+    "id": "q1-2025-vaultcall",
+    "year": "Q1 2025",
+    "title": "VaultCall Server Infrastructure",
+    "description": "Complete self-hosted VoIP backend (Asterisk, SIP, FastAPI, Whisper.cpp) on Oracle Cloud Free Tier with FCM push notifications, call screening pipeline, and on-device encryption.",
+    "category": "Infrastructure / Full Stack",
+    "tags": ["Asterisk", "FastAPI", "Whisper.cpp", "espeak-ng", "ffmpeg", "Oracle Cloud", "Docker"]
+  },
+  {
+    "id": "q4-2024-nl2bq",
+    "year": "Q4 2024",
+    "title": "NL2BQ Multi-Agent Pipeline",
+    "description": "LangGraph-based natural language to BigQuery SQL pipeline with schema awareness, dry-run validation, and Google Antigravity IDE integration.",
+    "category": "AI / LLM Orchestration",
+    "tags": ["LangGraph", "Claude Sonnet", "BigQuery", "Streamlit", "Python", "GCP"]
+  },
+  {
+    "id": "q3-q4-2024-research",
+    "year": "Q3-Q4 2024",
+    "title": "Two Research Papers Published",
+    "description": "Two peer-reviewed research papers accepted and published (Springer SSWC 2024, ICEMSSD 2024) demonstrating deep learning application methodology.",
+    "category": "Research",
+    "tags": ["PyTorch", "deep learning", "research methodology"]
+  },
+  {
+    "id": "q1-q2-2024-hccai",
+    "year": "Q1-Q2 2024",
+    "title": "HCC-AI Drug Discovery Pipeline (Phase 1-3)",
+    "description": "Structured 6-phase AI drug discovery pipeline for liver cancer with compute strategy across RTX 3050, Kaggle, Colab, and AlphaFold Server.",
+    "category": "Research / Scientific Computing",
+    "tags": ["PyTorch", "AlphaMissense", "AlphaFold3", "RDKit", "FAISS", "multi-GPU orchestration"]
+  },
+  {
+    "id": "2024-btech",
+    "year": "2024",
+    "title": "B.Tech CSE Graduation (8.6 CGPA)",
+    "description": "Completed 4-year computer science degree with final-year focus on AI/ML and research publications.",
+    "category": "Education",
+    "tags": ["Computer science fundamentals", "algorithms", "systems", "machine learning"]
+  },
+  {
+    "id": "2023-ai-agent",
+    "year": "2023",
+    "title": "Built AI Agent Instruction System",
+    "description": "12+ AI agent instruction modules (CLAUDE.md, AGENT_PROMPTS.md, domain-specific templates) for use with Claude API and agentic frameworks.",
+    "category": "AI / Prompt Engineering",
+    "tags": ["Claude API", "Python", "prompt engineering", "LangChain"]
+  },
+  {
+    "id": "2023-video-dubbing",
+    "year": "2023",
+    "title": "Generative Video Dubbing System",
+    "description": "Developed multimodal AI system for video dubbing integrating audio and visual pipelines.",
+    "category": "AI / Computer Vision",
+    "tags": []
+  },
+  {
+    "id": "2023-disease-prediction",
+    "year": "2023",
+    "title": "Disease Prediction Frameworks",
+    "description": "Built ML-based disease prediction systems and comparative model evaluation frameworks.",
+    "category": "AI / Machine Learning",
+    "tags": []
+  },
+  {
+    "id": "2022-2023-scholar-bridge",
+    "year": "2022–2023",
+    "title": "Scholar Bridge",
+    "description": "Developed web-based institutional communication platform.",
+    "category": "Full Stack",
+    "tags": []
+  },
+  {
+    "id": "2022-graph-opt",
+    "year": "2022",
+    "title": "Graph Optimization System",
+    "description": "Implemented graph theory-based optimization system using Reverse Delete algorithm.",
+    "category": "Algorithms",
+    "tags": []
+  }
+]

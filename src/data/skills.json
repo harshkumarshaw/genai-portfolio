@@ -1,0 +1,43 @@
+[
+  {
+    "name": "AI / ML",
+    "items": [
+      { "name": "PyTorch, TensorFlow, Hugging Face Transformers", "usedIn": "HCC-AI, Video Dubbing" },
+      { "name": "LangChain, LangGraph, LlamaIndex, FAISS", "usedIn": "NL2BQ, Agent Framework" },
+      { "name": "Deep Learning (CNNs, RNNs, Transformers)", "usedIn": "Research, HCC-AI" },
+      { "name": "RAG & Agentic Workflows", "usedIn": "NL2BQ, Agent Framework" },
+      { "name": "Models: Claude, OpenAI, AlphaMissense, AlphaFold3, Whisper", "usedIn": "VaultCall, NL2BQ, HCC-AI" },
+      { "name": "Multimodal AI (Audio + Vision)", "usedIn": "Video Dubbing" }
+    ]
+  },
+  {
+    "name": "Backend / Engineering",
+    "items": [
+      { "name": "Python (primary), Kotlin (Android)", "usedIn": "VaultCall, NL2BQ" },
+      { "name": "FastAPI, Streamlit, Flask, SQLAlchemy", "usedIn": "VaultCall, NL2BQ" },
+      { "name": "Asterisk, SIP, Docker, Linux/Ubuntu", "usedIn": "VaultCall" },
+      { "name": "BigQuery, SQLite, Room, SQLCipher", "usedIn": "NL2BQ, VaultCall" },
+      { "name": "Google Cloud, Oracle Cloud, Kaggle, Colab", "usedIn": "All Projects" }
+    ]
+  },
+  {
+    "name": "Frontend",
+    "items": [
+      { "name": "Kotlin, Jetpack Compose, MVVM, Hilt", "usedIn": "VaultCall" },
+      { "name": "Streamlit (rapid prototyping)", "usedIn": "NL2BQ" },
+      { "name": "HTML/CSS/JavaScript (basic)", "usedIn": "Scholar Bridge" },
+      { "name": "Minimal Design, Responsive Layouts", "usedIn": "Portfolio" }
+    ]
+  },
+  {
+    "name": "Tools & Infrastructure",
+    "items": [
+      { "name": "Git, GitHub, CI/CD", "usedIn": "All Projects" },
+      { "name": "Pandas, NumPy, scikit-learn, RDKit", "usedIn": "HCC-AI, Disease Prediction" },
+      { "name": "REST APIs, FCM, SIP protocol", "usedIn": "VaultCall" },
+      { "name": "MATLAB Modeling & MSER", "usedIn": "OCR System" },
+      { "name": "n8n, Make.com", "usedIn": "Automation Exploration" },
+      { "name": "IoT & 3D Printing", "usedIn": "Hardware Integration" }
+    ]
+  }
+]

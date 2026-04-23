@@ -1,0 +1,42 @@
+---
+title: "VaultCall — Privacy-First AI Dialer"
+abstract: "On-device call screening and transcription with zero cloud vendor dependency."
+date: "2025-01-15"
+---
+
+## Overview
+
+VaultCall is a privacy-first Android dialer application backed by a self-hosted VoIP infrastructure. It provides real-time, on-device call screening and transcription without ever sending sensitive audio data to third-party cloud APIs.
+
+## Problem
+
+Modern AI dialers and screening tools rely heavily on cloud APIs (like OpenAI or Google Cloud) for speech-to-text. This introduces massive privacy concerns for users who do not want their personal phone calls processed on external servers.
+
+## Why This Approach ⭐
+
+Android's OS-level Acoustic Echo Cancellation (AEC) aggressively blocks third-party apps from injecting or capturing raw call audio natively. To bypass this OS limitation while maintaining absolute privacy, we built a **custom, self-hosted SIP/VoIP backend**. This allows the app to handle the call audio stream independently of the native Android dialer constraints.
+
+## Solution + Architecture
+
+- **VoIP Backend**: A self-hosted Asterisk PBX server handling SIP protocols, deployed on an Oracle Cloud Free Tier instance.
+- **Orchestration**: FastAPI manages the call logic, recording triggers, and FCM (Firebase Cloud Messaging) push notifications.
+- **On-Device AI**: `Whisper.cpp` is cross-compiled to run directly on the Android device, handling all speech-to-text translation locally.
+- **Android App**: Built with Kotlin, Jetpack Compose, MVVM architecture, and Hilt for dependency injection.
+- **Security**: Local data is secured using Room integrated with SQLCipher.
+
+## Results / Impact
+
+- **100% On-Device Inference:** Zero external API calls are made for audio processing.
+- **Sub-200ms Latency:** Highly optimized C++ Whisper implementation ensures real-time transcription speeds.
+
+## Key Insights ⭐
+
+- **Control the infrastructure, control the data:** By moving away from the native cellular network to a self-hosted SIP trunk, we gained total programmatic control over the audio stream, enabling AI interventions that are impossible on standard Android apps.
+
+## System Thinking Snapshot ⭐
+
+This project required deep full-stack integration—from configuring low-level Linux networking and Asterisk dialplans on the cloud, to writing Python APIs, to managing complex C++ JNI bindings and modern Kotlin UI state on the mobile client.
+
+## Links
+
+- [View Source Code on GitHub](https://github.com/harshkumarshaw/VaultCall)

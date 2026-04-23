@@ -1,0 +1,24 @@
+[
+  {
+    "id": "sswc-2024",
+    "title": "Deep Learning for [Domain] — Springer SSWC 2024",
+    "abstract": "Published at Springer Smart Systems and Wireless Communication (SSWC) 2024. Applied deep learning architectures to real-world classification problems, demonstrating measurable improvements over baseline approaches on benchmark datasets.",
+    "status": "Published",
+    "appliedIn": "Academic credibility; cited in future work; potential for extension to multiple domains",
+    "link": "#",
+    "authors": "Harsh Kumar Shaw et al.",
+    "year": "2024",
+    "tag": "Peer-Reviewed"
+  },
+  {
+    "id": "icemssd-2024",
+    "title": "Deep Learning Application — ICEMSSD 2024",
+    "abstract": "Published at International Conference on Emerging Materials, Sustainable Systems and Devices (ICEMSSD) 2024. Extended prior deep learning methodology to a new domain, contributing reproducible experiments and open methodology to applied AI literature.",
+    "status": "Published",
+    "appliedIn": "Domain diversification; research-to-practice translation; methodology refinement",
+    "link": "#",
+    "authors": "Harsh Kumar Shaw et al.",
+    "year": "2024",
+    "tag": "Peer-Reviewed"
+  }
+]

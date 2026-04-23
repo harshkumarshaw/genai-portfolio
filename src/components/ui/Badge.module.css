@@ -1,0 +1,35 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  font-family: var(--font-mono);
+}
+
+.default {
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.blue {
+  background-color: var(--accent-blue-glow);
+  color: var(--accent-blue);
+  border-color: var(--border-active);
+}
+
+.gold {
+  background-color: var(--accent-gold-glow);
+  color: var(--accent-gold);
+  border-color: rgba(240, 165, 0, 0.3);
+}
+
+.outline {
+  background-color: transparent;
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}

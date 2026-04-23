@@ -1,0 +1,51 @@
+---
+title: "HCC-AI — 6-Phase AI Drug Discovery Pipeline"
+abstract: "Accelerating Hepatocellular Carcinoma (HCC) drug candidate identification and validation using multi-modal deep learning."
+date: "2024-03-01"
+---
+
+## Overview
+
+HCC-AI is an end-to-end, research-grade pipeline aimed at accelerating drug discovery for Liver Cancer (Hepatocellular Carcinoma). It integrates state-of-the-art deep learning and bioinformatics to systematically discover and validate drug candidates.
+
+## Problem
+
+Traditional drug discovery is prohibitively slow and expensive. Rare and under-resourced diseases require accelerated pipelines that leverage modern deep learning (like AlphaFold3 and generative models) to rapidly simulate and validate targets before wet-lab testing.
+
+## Why This Approach ⭐
+
+Drug discovery cannot be solved by a single model. We architected a **6-phase structured pipeline** that cascades data from raw genetic mutations all the way to 3D protein simulation. This modular approach ensures that each step is biologically grounded and scientifically verifiable.
+
+## Solution + Architecture
+
+The pipeline consists of six distinct phases:
+1. **Subtype-GAN**: Disease subtype stratification using Generative Adversarial Networks.
+2. **Biomarker Scoring**: Using the AlphaMissense API to score mutation impacts.
+3. **MMDRP**: Multi-Modal Drug Response Prediction.
+4. **Drug Repurposing**: Utilizing PyKEEN + BioGPT for knowledge graph-based repurposing.
+5. **Protein Simulation**: AlphaFold3 Server for structural prediction.
+6. **Digital Twin**: Final validation.
+
+**Compute Strategy:** 
+We engineered a highly resource-aware compute orchestration: 
+- **Local RTX 3050 (4GB)** for rapid prototyping and lightweight training.
+- **Kaggle P100** for heavy inference.
+- **Google Colab T4** for auxiliary tasks.
+- **AlphaFold Server** free tier for complex structure prediction.
+
+## Results / Impact
+
+- The pipeline's top-20 candidates successfully matched known, clinically approved drugs (e.g., Sorafenib, Lenvatinib), proving the system's validity.
+- Achieved **end-to-end pipeline execution in under 8 weeks**.
+
+## Key Insights ⭐
+
+- **Hardware-aware engineering is essential:** Effectively distributing the workload across free-tier cloud GPUs and local hardware allowed for enterprise-scale research on a zero-dollar compute budget.
+
+## System Thinking Snapshot ⭐
+
+The pipeline demonstrates a profound understanding of data hand-offs. The output of the GAN directly informs the BioGPT prompts, whose outputs are then structurally validated by AlphaFold, creating a tightly coupled, automated scientific workflow.
+
+## Links
+
+- [View Source Code on GitHub](https://github.com/harshkumarshaw/AID-Drug-Discovery)

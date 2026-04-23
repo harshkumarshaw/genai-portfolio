@@ -1,0 +1,22 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--accent-gold-glow);
+  border: 1px solid rgba(240, 165, 0, 0.2);
+  border-radius: 4px;
+  color: var(--accent-gold);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}

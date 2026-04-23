@@ -1,0 +1,42 @@
+---
+title: "NL2BQ — Multi-Agent BigQuery Pipeline"
+abstract: "Converting natural language queries to production-grade SQL, removing SQL friction for non-technical analysts."
+date: "2024-10-01"
+---
+
+## Overview
+
+The NL2BQ pipeline is a multi-agent system designed to bridge the gap between business analysts and complex enterprise data warehouses. By translating natural language directly into validated BigQuery SQL, it accelerates time-to-insight by 40-50%.
+
+## Problem
+
+Non-technical business users often rely on data engineers to write complex SQL queries to extract insights from enterprise data warehouses. This creates a bottleneck, delaying critical business decisions and misallocating engineering resources.
+
+## Why This Approach ⭐
+
+A standard single-pass LLM approach often fails on complex, real-world enterprise schemas due to hallucinated tables or incorrect joins. We adopted a **LangGraph multi-agent pipeline** because it allows for an iterative, self-correcting workflow. The system fetches the exact schema, attempts the query, performs a dry-run against BigQuery, and autonomously refines the SQL if syntax errors are detected.
+
+## Solution + Architecture
+
+- **Reasoning Engine**: Claude Sonnet acts as the reasoning backbone.
+- **Orchestration**: LangGraph manages the multi-step state machine (Fetch Schema -> Generate -> Dry Run -> Refine).
+- **Integration**: Fully integrated with the Google Antigravity IDE for seamless developer experience.
+- **Backend**: A rate-limited SQLite backend was implemented for strict API cost control.
+
+## Results / Impact
+
+- **40-50% faster query generation** compared to manual writing.
+- Over **100+ complex test queries** validated successfully in production-like environments.
+
+## Key Insights ⭐
+
+- **Dry-runs are critical:** The ability to pre-validate SQL syntax against the actual BigQuery API before returning the result drastically reduces user-facing errors.
+- **Stateful reasoning outperforms zero-shot:** The iterative refine loop catches edge cases that even advanced models miss on the first pass.
+
+## System Thinking Snapshot ⭐
+
+The architecture was deliberately designed not just as a wrapper around an LLM, but as a robust backend service that treats the LLM as one component within a larger, deterministic validation loop.
+
+## Links
+
+- [View Source Code on GitHub](https://github.com/harshkumarshaw/NL2BQ)

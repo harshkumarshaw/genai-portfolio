@@ -1,0 +1,107 @@
+[
+  {
+    "id": "nl2bq",
+    "title": "NL2BQ — Multi-Agent BigQuery Pipeline",
+    "description": "Convert natural language queries to production-grade SQL, removing SQL friction for non-technical analysts.",
+    "category": "AI Systems",
+    "isFlagship": true,
+    "metrics": ["40-50% faster query generation", "100+ test queries validated"],
+    "tags": ["LangGraph", "Claude Sonnet", "BigQuery", "Streamlit", "Python", "GCP"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/harshkumarshaw/NL2BQ" },
+      { "label": "Demo", "url": "#" }
+    ],
+    "image": "/images/projects/nl2bq.jpg",
+    "caseStudyUrl": "/projects/nl2bq"
+  },
+  {
+    "id": "hcc-ai",
+    "title": "HCC-AI — AI-Assisted Drug Discovery",
+    "description": "Accelerate HCC drug candidate identification and validation using multi-modal deep learning.",
+    "category": "AI Research",
+    "isFlagship": true,
+    "metrics": ["Top-20 candidates match known drugs", "<8 weeks pipeline execution"],
+    "tags": ["PyTorch", "Transformers", "AlphaMissense API", "AlphaFold3 Server", "RDKit", "FAISS", "Docker"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/harshkumarshaw/AID-Drug-Discovery" }
+    ],
+    "image": "/images/projects/hcc-ai.jpg",
+    "caseStudyUrl": "/projects/hcc-ai"
+  },
+  {
+    "id": "vaultcall",
+    "title": "VaultCall — Privacy-First Android AI Dialer",
+    "description": "On-device call screening and transcription with zero cloud vendor dependency.",
+    "category": "Full Stack",
+    "isFlagship": false,
+    "metrics": ["100% on-device inference", "<200ms transcription latency", "0 external API calls"],
+    "tags": ["Kotlin", "Asterisk", "SIP", "Whisper.cpp", "FastAPI", "Oracle Cloud"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/harshkumarshaw/VaultCall" }
+    ],
+    "image": "/images/projects/vaultcall.jpg",
+    "caseStudyUrl": "/projects/vaultcall"
+  },
+  {
+    "id": "ai-agent-framework",
+    "title": "Claude-Integrated AI Agent System",
+    "description": "Extensible agent framework using Claude for complex reasoning tasks in autonomous workflows.",
+    "category": "AI Systems",
+    "isFlagship": false,
+    "metrics": ["12+ generated module templates", "2 consolidated context files"],
+    "tags": ["Claude API", "Python", "LangChain", "FastAPI", "Prompt Engineering"],
+    "links": [],
+    "image": "/images/projects/agent.jpg"
+  },
+  {
+    "id": "video-dubbing",
+    "title": "Generative Video Dubbing System",
+    "description": "Built a multimodal AI system for automated video dubbing with synchronized lip movement.",
+    "category": "Computer Vision",
+    "isFlagship": false,
+    "metrics": ["~95% lip-sync accuracy"],
+    "tags": ["PyTorch", "OpenCV", "dlib", "TorchVision", "MFCC", "Django"],
+    "links": [],
+    "image": "/images/projects/dubbing.jpg"
+  },
+  {
+    "id": "heart-disease",
+    "title": "Heart Disease Prediction & ML Analysis",
+    "description": "Compared multiple ML algorithms to improve disease prediction accuracy.",
+    "category": "Machine Learning",
+    "isFlagship": false,
+    "metrics": ["Achieved ~86% accuracy across models"],
+    "tags": ["Python", "Scikit-learn", "LR", "KNN", "Decision Tree", "Random Forest"],
+    "links": []
+  },
+  {
+    "id": "ocr-text",
+    "title": "OCR Text Extraction Model",
+    "description": "Extracted structured text data from image inputs using computer vision techniques.",
+    "category": "Computer Vision",
+    "isFlagship": false,
+    "metrics": ["Reliable detection using MSER-based approach"],
+    "tags": ["MATLAB", "MSER algorithm"],
+    "links": []
+  },
+  {
+    "id": "scholar-bridge",
+    "title": "Scholar Bridge",
+    "description": "Built a web-based system to streamline communication within educational institutions.",
+    "category": "Full Stack",
+    "isFlagship": false,
+    "metrics": ["Enabled multi-role interaction"],
+    "tags": ["Django", "HTML", "CSS", "JavaScript", "MySQL"],
+    "links": []
+  },
+  {
+    "id": "graph-optimization",
+    "title": "Network Optimization using Reverse Delete Algorithm",
+    "description": "Identified optimal network configuration using graph theory.",
+    "category": "Algorithms",
+    "isFlagship": false,
+    "metrics": ["Efficient computation of minimum spanning solution"],
+    "tags": ["Graph algorithms", "data structures"],
+    "links": []
+  }
+]
