@@ -1,6 +1,6 @@
 .section {
   padding: 8rem 0;
-  background: var(--bg-primary);
+  background: transparent;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -102,8 +102,19 @@
 }
 
 @media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+  }
+  
   .socialRow {
     flex-wrap: wrap;
     gap: 0.5rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
   }
 }

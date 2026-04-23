@@ -1,6 +1,6 @@
 .section {
-  padding: var(--space-xl) 0;
-  background-color: var(--bg-primary);
+  padding: var(--space-2xl) 0;
+  background: transparent;
 }
 
 .container {
@@ -106,5 +106,13 @@
 @media (max-width: 768px) {
   .resumeGrid {
     grid-template-columns: 1fr;
+  }
+  
+  .resumeCard {
+    padding: 1.5rem;
+  }
+  
+  .role {
+    font-size: 1.25rem;
   }
 }

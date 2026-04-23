@@ -56,7 +56,13 @@ export default function WhatImSolving() {
           className={styles.grid}
         >
           {domains.map((domain, i) => (
-            <motion.div key={i} variants={itemVariants} className={styles.card}>
+            <motion.div 
+              key={i} 
+              variants={itemVariants} 
+              className={styles.card}
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className={styles.iconWrapper}>
                 {domain.icon}
               </div>

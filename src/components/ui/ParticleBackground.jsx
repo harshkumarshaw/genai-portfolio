@@ -48,13 +48,13 @@ export default function ParticleBackground() {
       },
       particles: {
         color: {
-          value: "#3B82F6",
+          value: "#7C3AED", // Premium Violet
         },
         links: {
-          color: "#3B82F6",
+          color: "#06B6D4", // Electric Cyan
           distance: 150,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.25,
           width: 1,
         },
         move: {
@@ -72,7 +72,7 @@ export default function ParticleBackground() {
             enable: true,
             area: 800,
           },
-          value: 60,
+          value: 100,
         },
         opacity: {
           value: 0.3,
@@ -91,7 +91,7 @@ export default function ParticleBackground() {
 
   if (init) {
     return (
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
+      <div style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", zIndex: -1 }}>
         <Particles
           id="tsparticles"
           options={options}

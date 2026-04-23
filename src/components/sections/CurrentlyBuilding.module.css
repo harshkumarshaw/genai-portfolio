@@ -55,9 +55,17 @@
   50%       { opacity: 1; }
 }
 
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+}
+
 .items {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding-right: 2rem; /* ensures gap at loop end */
 }
 
 .item {

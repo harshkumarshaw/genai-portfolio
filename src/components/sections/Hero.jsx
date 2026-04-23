@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import ParticleBackground from '@/components/ui/ParticleBackground';
 import styles from './Hero.module.css';
 
 import Link from 'next/link';
@@ -23,7 +22,6 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <ParticleBackground />
 
       {/* Ambient glow orbs */}
       <div className={styles.orb1} />

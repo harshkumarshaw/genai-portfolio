@@ -26,12 +26,14 @@ export const metadata = {
 };
 
 import { Providers } from "./Providers";
+import ParticleBackground from "@/components/ui/ParticleBackground";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
         <Providers>
+          <ParticleBackground />
           <Navbar />
           <main>
             {children}

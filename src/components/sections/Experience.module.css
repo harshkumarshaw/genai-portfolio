@@ -1,6 +1,6 @@
 .section {
-  padding: var(--space-xl) 0;
-  background-color: var(--bg-primary);
+  padding: var(--space-2xl) 0;
+  background: transparent;
 }
 
 .container {
@@ -101,5 +101,13 @@
   .header {
     flex-direction: column;
     gap: var(--space-xs);
+  }
+  
+  .experienceItem {
+    padding-left: 1rem;
+  }
+  
+  .duration {
+    margin-top: 0.25rem;
   }
 }
