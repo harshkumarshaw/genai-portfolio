@@ -48,13 +48,13 @@ export default function ParticleBackground() {
       },
       particles: {
         color: {
-          value: "#7C3AED", // Premium Violet
+          value: "#A855F7", // Brighter Violet for better contrast
         },
         links: {
-          color: "#06B6D4", // Electric Cyan
+          color: "#22D3EE", // Brighter Cyan
           distance: 150,
           enable: true,
-          opacity: 0.25,
+          opacity: 0.35, // Increased from 0.25
           width: 1,
         },
         move: {
@@ -75,7 +75,7 @@ export default function ParticleBackground() {
           value: 100,
         },
         opacity: {
-          value: 0.3,
+          value: 0.5, // Increased from 0.3
         },
         shape: {
           type: "circle",
