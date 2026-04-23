@@ -5,11 +5,7 @@ import { Button } from '@/components/ui/Button';
 import ParticleBackground from '@/components/ui/ParticleBackground';
 import styles from './Hero.module.css';
 
-const STATS = [
-  { value: '2', label: 'Papers Published' },
-  { value: '9+', label: 'Projects Shipped' },
-  { value: '8.6', label: 'CGPA' },
-];
+import Link from 'next/link';
 
 export default function Hero() {
   const containerVariants = {
@@ -64,9 +60,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p variants={itemVariants} className={styles.subtitle}>
-            I engineer <strong>privacy-first AI</strong> that lives on-device, translate
-            natural language into <strong>enterprise SQL at scale</strong>, and apply deep
-            learning to accelerate <strong>drug discovery</strong> — all shipped to production.
+            I build production-grade AI systems—from <strong>enterprise SQL generation</strong> to <strong>privacy-first on-device inference</strong>—focusing on architectural scale and measurable business impact.
           </motion.p>
 
           {/* CTA Row */}
@@ -78,14 +72,17 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats row */}
-          <motion.div variants={itemVariants} className={styles.stats}>
-            {STATS.map((s, i) => (
-              <div key={i} className={styles.stat}>
-                <span className={styles.statValue}>{s.value}</span>
-                <span className={styles.statLabel}>{s.label}</span>
-              </div>
-            ))}
+          {/* Flagship Callout */}
+          <motion.div variants={itemVariants} className={styles.flagshipPreview}>
+            <div className={styles.flagshipHeader}>
+              <span className={styles.flagshipBadge}>Live System Impact</span>
+            </div>
+            <p className={styles.flagshipText}>
+              <strong>NL2BQ Pipeline:</strong> Reduced enterprise SQL query generation time by 40-50% using a LangGraph + Claude orchestration layer.
+            </p>
+            <Link href="/projects/nl2bq" className={styles.flagshipLink}>
+              Read the Case Study ↗
+            </Link>
           </motion.div>
         </motion.div>
       </div>

@@ -10,17 +10,17 @@ export default function WhatImSolving() {
     {
       icon: <Activity size={32} />,
       title: "Natural Language to Enterprise SQL",
-      description: "Enabling non-technical business users to query enterprise data warehouses without SQL knowledge."
+      description: "Enabling non-technical business users to query enterprise data warehouses without SQL knowledge. Impact: Reduces analytical bottlenecks and query wait times by up to 50%."
     },
     {
       icon: <Zap size={32} />,
       title: "Privacy-First AI Systems",
-      description: "Building AI systems with real privacy guarantees—moving inference away from cloud APIs to on-device infrastructure."
+      description: "Building AI systems with real privacy guarantees—moving inference away from cloud APIs to on-device infrastructure. Impact: Enables 100% data ownership with zero external API calls."
     },
     {
       icon: <Cpu size={32} />,
       title: "AI Drug Discovery Acceleration",
-      description: "Accelerating drug discovery for rare diseases by applying SOTA deep learning in a structured, reproducible pipeline."
+      description: "Accelerating drug discovery for rare diseases by applying SOTA deep learning in a structured, reproducible pipeline. Impact: Shrinks early-stage validation from years to weeks."
     }
   ];
 

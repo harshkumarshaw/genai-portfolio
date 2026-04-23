@@ -26,8 +26,14 @@ export default function Contact() {
           </p>
           
           <div className={styles.actions}>
-            <Button href="mailto:kumarharshshaw@gmail.com" variant="primary" className={styles.ctaButton}>
-              Say Hello
+            <Button href="mailto:kumarharshshaw@gmail.com?subject=Full-Time Engineering Role" variant="primary" className={styles.ctaButton}>
+              Hire for Full-Time
+            </Button>
+            <Button href="mailto:kumarharshshaw@gmail.com?subject=Freelance / Contract Inquiry" variant="outline" className={styles.ctaButton}>
+              Contract / Freelance
+            </Button>
+            <Button href="#resume" variant="ghost" className={styles.ctaButton}>
+              Download Resumes ↓
             </Button>
           </div>
           

@@ -28,6 +28,11 @@ A standard single-pass LLM approach often fails on complex, real-world enterpris
 - **40-50% faster query generation** compared to manual writing.
 - Over **100+ complex test queries** validated successfully in production-like environments.
 
+## Engineering Trade-offs & Alternatives Rejected ⚖️
+
+- **Fine-tuning open-source LLMs vs. Prompting Claude Sonnet:** We rejected fine-tuning Llama-3 because the schema variability across enterprise databases would require continuous retraining. Claude Sonnet provided superior zero-shot reasoning over complex, dynamic schemas, allowing the LangGraph orchestrator to handle the logic flow.
+- **Single-prompt SQL generation vs. Multi-agent flow:** Initial tests with a massive single prompt failed on multi-table joins. We chose a LangGraph multi-step flow (Parse -> Retrieve Schema -> Generate -> Validate) which increased latency slightly but boosted accuracy from ~60% to over 90%.
+
 ## Key Insights ⭐
 
 - **Dry-runs are critical:** The ability to pre-validate SQL syntax against the actual BigQuery API before returning the result drastically reduces user-facing errors.

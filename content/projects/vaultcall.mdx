@@ -29,6 +29,11 @@ Android's OS-level Acoustic Echo Cancellation (AEC) aggressively blocks third-pa
 - **100% On-Device Inference:** Zero external API calls are made for audio processing.
 - **Sub-200ms Latency:** Highly optimized C++ Whisper implementation ensures real-time transcription speeds.
 
+## Engineering Trade-offs & Alternatives Rejected ⚖️
+
+- **Android Native Call Recording vs. Self-hosted VoIP:** We initially attempted to capture audio using Android's native `MediaRecorder`, but Android OS-level Acoustic Echo Cancellation (AEC) and privacy lockdowns blocked the uplink stream. We rejected native workarounds because they were brittle and device-dependent, opting instead for a self-hosted Asterisk PBX which gave us 100% control over the audio stream.
+- **Cloud STT APIs vs. On-device Whisper.cpp:** Using Google Cloud Speech-to-Text would have been much easier to implement and less battery-intensive. However, it violated the core "privacy-first" constraint of the app. We chose to cross-compile `Whisper.cpp` to run locally on Android via JNI, accepting a larger APK size and higher CPU usage in exchange for zero cloud vendor dependency and absolute data privacy.
+
 ## Key Insights ⭐
 
 - **Control the infrastructure, control the data:** By moving away from the native cellular network to a self-hosted SIP trunk, we gained total programmatic control over the audio stream, enabling AI interventions that are impossible on standard Android apps.

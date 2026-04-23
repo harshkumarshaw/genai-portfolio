@@ -39,7 +39,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Engineering Evolution</h3>
             <p className={styles.cardText}>
-              I transitioned from academic ML projects to full-scale AI system design involving orchestration, validation, and deployment. I don't just train models—I think in terms of complete systems, infrastructure planning, and real-world architectures.
+              I design full-scale AI systems, moving beyond training models to focus on orchestration, validation, and real-world deployment architecture.
             </p>
           </motion.div>
 
@@ -50,7 +50,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Execution Style</h3>
             <p className={styles.cardText}>
-              A strong self-driven learning approach allows me to independently build complex systems. I thrive when balancing multiple parallel projects with long execution cycles, focusing entirely on building real-world solutions rather than theoretical implementations.
+              I am a self-driven builder who thrives on complex, parallel projects, prioritizing production-ready solutions over theoretical implementations.
             </p>
           </motion.div>
 
@@ -61,7 +61,7 @@ export default function About() {
             </div>
             <h3 className={styles.cardTitle}>Leadership & Foundation</h3>
             <p className={styles.cardText}>
-              I led student initiatives under the AICTE IDEA Lab and IIC, mentoring peers in project development. Holding a B.Tech in CSE (8.6 CGPA, 2024), my foundation is rooted in computer science fundamentals, algorithms, and systems.
+              With a B.Tech in CSE (8.6 CGPA) and experience leading AICTE IDEA Lab initiatives, my engineering is grounded in rigorous CS fundamentals.
             </p>
           </motion.div>
         </motion.div>
