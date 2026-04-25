@@ -4,57 +4,101 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
   width: 100%;
 }
 
-.resumeGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--space-xl);
+.intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  max-width: 500px;
 }
 
+.resumeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ===== RESUME CARD ===== */
 .resumeCard {
+  position: relative;
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: border-color var(--transition-base);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: pointer;
 }
 
 .resumeCard:hover {
-  border-color: var(--border-active);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
 }
 
-.header {
-  margin-bottom: var(--space-lg);
+/* Color-coded top bar */
+.cardTop {
+  height: 4px;
+  transition: height var(--transition-base);
+}
+
+.amber .cardTop { background: linear-gradient(90deg, #F59E0B, #F97316); }
+.teal .cardTop  { background: linear-gradient(90deg, #14B8A6, #06B6D4); }
+.lime .cardTop  { background: linear-gradient(90deg, #84CC16, #BFFF00); }
+
+.resumeCard:hover .cardTop {
+  height: 6px;
+}
+
+/* Active (selected) state — scale up */
+.active {
+  border-color: var(--border-active);
+  z-index: 2;
+}
+
+.amber.active { box-shadow: 0 0 40px rgba(245,158,11,0.15), 0 24px 60px rgba(0,0,0,0.4); }
+.teal.active  { box-shadow: 0 0 40px rgba(20,184,166,0.15), 0 24px 60px rgba(0,0,0,0.4); }
+.lime.active  { box-shadow: 0 0 40px rgba(191,255,0,0.1), 0 24px 60px rgba(0,0,0,0.4); }
+
+.cardContent {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 12px rgba(245,158,11,0.3));
 }
 
 .role {
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
 }
 
 .target {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--accent-blue);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
 
 .strengths {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--space-xl) 0;
+  margin: 0 0 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 0.65rem;
   flex-grow: 1;
 }
 
@@ -63,27 +107,24 @@
   padding-left: 1.5rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  font-size: 0.9rem;
 }
 
-.strengths li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--accent-gold);
-  font-weight: bold;
-}
+.amber .strengths li::before { content: '✓'; position: absolute; left: 0; color: #F59E0B; font-weight: bold; }
+.teal .strengths li::before  { content: '✓'; position: absolute; left: 0; color: #14B8A6; font-weight: bold; }
+.lime .strengths li::before  { content: '✓'; position: absolute; left: 0; color: #84CC16; font-weight: bold; }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--space-lg);
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
 }
 
 .updated {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
 }
@@ -96,23 +137,23 @@
 }
 
 .downloadIcon {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
-.resumeCard:hover .downloadBtn {
-  border-color: var(--accent-gold);
-}
-
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
   .resumeGrid {
     grid-template-columns: 1fr;
+    max-width: 450px;
   }
-  
-  .resumeCard {
+}
+
+@media (max-width: 640px) {
+  .cardContent {
     padding: 1.5rem;
   }
   
   .role {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 }

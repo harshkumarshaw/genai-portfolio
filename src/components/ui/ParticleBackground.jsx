@@ -48,13 +48,13 @@ export default function ParticleBackground() {
       },
       particles: {
         color: {
-          value: "#A855F7", // Brighter Violet for better contrast
+          value: "#FBBF24", // Warm amber
         },
         links: {
-          color: "#22D3EE", // Brighter Cyan
+          color: "#2DD4BF", // Teal light
           distance: 150,
           enable: true,
-          opacity: 0.35, // Increased from 0.25
+          opacity: 0.25,
           width: 1,
         },
         move: {
@@ -64,24 +64,24 @@ export default function ParticleBackground() {
             default: "bounce",
           },
           random: false,
-          speed: 1,
+          speed: 0.8,
           straight: false,
         },
         number: {
           density: {
             enable: true,
-            area: 800,
+            area: 900,
           },
-          value: 100,
+          value: 80,
         },
         opacity: {
-          value: 0.5, // Increased from 0.3
+          value: 0.4,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 2 },
+          value: { min: 1, max: 2.5 },
         },
       },
       detectRetina: true,

@@ -13,21 +13,27 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: var(--accent-blue);
-  color: #fff;
+  background: var(--gradient-primary);
+  color: #0A0A0F;
   border: none;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-base);
+  font-weight: 700;
+}
+
+.mainBtn:hover {
+  box-shadow: 0 6px 30px rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
 }
 
 .mainBtn.active {
-  background-color: var(--bg-elevated);
+  background: var(--bg-elevated);
   border: 1px solid var(--border-active);
-  color: var(--accent-blue);
+  color: var(--accent-primary);
 }
 
 .rotate {
@@ -66,5 +72,5 @@
 
 .menuItem:hover {
   background-color: var(--bg-elevated);
-  color: var(--accent-blue);
+  color: var(--accent-primary);
 }

@@ -12,7 +12,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color var(--transition-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
   transform-style: preserve-3d;
   min-height: 400px;
 }
@@ -23,7 +23,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, var(--accent-blue-glow), transparent 60%);
+  background: linear-gradient(135deg, rgba(245,158,11,0.15), transparent 60%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -35,6 +35,7 @@
 
 .card:hover {
   border-color: var(--border-active);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(245,158,11,0.08);
 }
 
 .card:hover::before {
@@ -49,7 +50,7 @@
   height: 100%;
   background: radial-gradient(
     1000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    var(--accent-blue-glow),
+    rgba(245,158,11,0.08),
     transparent 40%
   );
   opacity: 0;
@@ -91,7 +92,7 @@
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, transparent 0%, rgba(22, 22, 22, 0.4) 100%);
+  background: linear-gradient(to right, transparent 0%, rgba(16, 16, 26, 0.5) 100%);
   pointer-events: none;
 }
 
@@ -127,12 +128,13 @@
 }
 
 .type {
-  color: var(--accent-blue);
+  color: var(--accent-primary);
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-sm);
   line-height: 1.1;
@@ -171,7 +173,7 @@
   }
   
   .imageOverlay {
-    background: linear-gradient(to bottom, transparent 0%, rgba(22, 22, 22, 0.4) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(16, 16, 26, 0.5) 100%);
   }
   
   .content {

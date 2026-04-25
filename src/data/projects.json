@@ -11,7 +11,7 @@
       { "label": "GitHub", "url": "https://github.com/harshkumarshaw/NL2BQ" },
       { "label": "Demo", "url": "#" }
     ],
-    "image": "/images/projects/nl2bq.jpg",
+    "image": "/images/projects/nl2bq-arch.png",
     "caseStudyUrl": "/projects/nl2bq"
   },
   {
@@ -51,7 +51,8 @@
     "metrics": ["12+ generated module templates", "2 consolidated context files"],
     "tags": ["Claude API", "Python", "LangChain", "FastAPI", "Prompt Engineering"],
     "links": [],
-    "image": "/images/projects/agent.jpg"
+    "image": "/images/projects/agent.jpg",
+    "caseStudyUrl": "/projects/claude-agent-framework"
   },
   {
     "id": "video-dubbing",
@@ -62,7 +63,8 @@
     "metrics": ["~95% lip-sync accuracy"],
     "tags": ["PyTorch", "OpenCV", "dlib", "TorchVision", "MFCC", "Django"],
     "links": [],
-    "image": "/images/projects/dubbing.jpg"
+    "image": "/images/projects/dubbing.jpg",
+    "caseStudyUrl": "/projects/video-dubbing-system"
   },
   {
     "id": "heart-disease",
@@ -72,7 +74,8 @@
     "isFlagship": false,
     "metrics": ["Achieved ~86% accuracy across models"],
     "tags": ["Python", "Scikit-learn", "LR", "KNN", "Decision Tree", "Random Forest"],
-    "links": []
+    "links": [],
+    "caseStudyUrl": "/projects/heart-disease-prediction"
   },
   {
     "id": "ocr-text",
@@ -82,7 +85,8 @@
     "isFlagship": false,
     "metrics": ["Reliable detection using MSER-based approach"],
     "tags": ["MATLAB", "MSER algorithm"],
-    "links": []
+    "links": [],
+    "caseStudyUrl": "/projects/ocr-text-recognition"
   },
   {
     "id": "scholar-bridge",
@@ -92,7 +96,8 @@
     "isFlagship": false,
     "metrics": ["Enabled multi-role interaction"],
     "tags": ["Django", "HTML", "CSS", "JavaScript", "MySQL"],
-    "links": []
+    "links": [],
+    "caseStudyUrl": "/projects/scholar-bridge"
   },
   {
     "id": "graph-optimization",
@@ -102,6 +107,7 @@
     "isFlagship": false,
     "metrics": ["Efficient computation of minimum spanning solution"],
     "tags": ["Graph algorithms", "data structures"],
-    "links": []
+    "links": [],
+    "caseStudyUrl": "/projects/graph-optimization"
   }
 ]

@@ -17,7 +17,7 @@
 }
 
 .backLink:hover {
-  color: var(--text-primary);
+  color: var(--accent-primary-light);
 }
 
 .header {
@@ -27,8 +27,9 @@
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -49,6 +50,7 @@
 }
 
 .h2 {
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -57,6 +59,7 @@
 }
 
 .h3 {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -79,26 +82,26 @@
 }
 
 .li::marker {
-  color: var(--accent-blue);
+  color: var(--accent-primary);
 }
 
 .a {
-  color: var(--accent-blue);
+  color: var(--accent-primary);
   text-decoration: underline;
   text-underline-offset: 4px;
-  text-decoration-color: rgba(59, 130, 246, 0.3);
+  text-decoration-color: rgba(245, 158, 11, 0.3);
   transition: text-decoration-color var(--transition-fast);
 }
 
 .a:hover {
-  text-decoration-color: var(--accent-blue);
+  text-decoration-color: var(--accent-primary);
 }
 
 .blockquote {
-  border-left: 3px solid var(--accent-gold);
+  border-left: 3px solid var(--accent-primary);
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-xl) 0;
-  background: linear-gradient(to right, var(--accent-gold-glow), transparent 40%);
+  background: linear-gradient(to right, rgba(245,158,11,0.06), transparent 40%);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   font-style: italic;
   color: var(--text-primary);
@@ -119,6 +122,7 @@
 }
 
 .ctaTitle {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);

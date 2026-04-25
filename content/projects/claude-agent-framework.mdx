@@ -1,0 +1,37 @@
+---
+title: "Claude-Integrated AI Agent System"
+abstract: "Extensible agent framework using Claude for complex reasoning tasks in autonomous workflows."
+date: "2023-08-01"
+---
+
+## Overview
+
+A comprehensive agent instruction system designed for the Claude API, built to execute complex, modular reasoning tasks. It provides a structured foundation for developing autonomous workflows.
+
+## Problem
+
+Building multi-agent systems often results in brittle, monolithic prompt structures that are difficult to debug or extend. As autonomous workflows scale, they require highly specialized, domain-specific instruction sets that can interact predictably.
+
+## Why This Approach ⭐
+
+Instead of building a massive single-prompt application, this project focuses on **Prompt Engineering Discipline at Scale**. By breaking down agent roles into 12 domain-specific module files (covering reasoning, classification, generation, and orchestration), the system becomes highly extensible and easier to integrate into larger frameworks like LangChain or AutoGen.
+
+## Solution + Architecture
+
+- **Core Engine**: Claude API
+- **Modular Templates**: 12+ generated module templates governing distinct agent behaviors.
+- **Consolidation**: Master prompts (`CLAUDE.md`, `AGENT_PROMPTS.md`) and two consolidated context files designed specifically for integration with Claude Code and other agentic environments.
+- **Framework Integration**: Built using Python and LangChain.
+
+## Results / Impact
+
+- Created a robust repository of **12+ generated module templates**.
+- Successfully consolidated context files that serve as the backbone for complex, multi-agent AI systems, dramatically reducing prompt tuning time for new workflows.
+
+## Key Insights ⭐
+
+- **Modularity is crucial for Agents:** Treating prompt templates as code modules (with clear inputs, constraints, and outputs) allows for version control and rigorous testing of agent behavior.
+
+## Links
+
+- GitHub Repository: Internal / Shareable Repo

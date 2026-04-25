@@ -14,7 +14,7 @@
   height: 100%;
   text-decoration: none;
   overflow: hidden;
-  transition: border-color var(--transition-base), transform var(--transition-base);
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   transform-style: preserve-3d;
 }
 
@@ -24,7 +24,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, var(--accent-blue-glow), transparent 40%);
+  background: linear-gradient(135deg, rgba(245,158,11,0.12), transparent 40%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -34,6 +34,7 @@
 
 .card:hover {
   border-color: var(--border-active);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3), 0 0 30px rgba(245,158,11,0.08);
 }
 
 .card:hover::before {
@@ -48,7 +49,7 @@
   height: 100%;
   background: radial-gradient(
     800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    var(--accent-blue-glow),
+    rgba(245,158,11,0.06),
     transparent 40%
   );
   opacity: 0;
@@ -83,10 +84,11 @@
 }
 
 .type {
-  color: var(--accent-blue);
+  color: var(--accent-primary);
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -119,7 +121,7 @@
 .viewLink {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--accent-blue);
+  color: var(--accent-primary);
   opacity: 0;
   transform: translateX(-10px);
   transition: opacity var(--transition-base), transform var(--transition-base);

@@ -1,0 +1,27 @@
+---
+title: "OCR Text Extraction Model"
+abstract: "Extracted structured text data from image inputs using computer vision techniques."
+date: "2022-10-01"
+---
+
+## Overview
+
+An early computer vision project aimed at developing a robust system for detecting and extracting text from images using traditional image processing algorithms.
+
+## Problem
+
+Converting unstructured image data (like scanned documents or photographs of text) into structured, machine-readable formats is a fundamental requirement for many data digitization processes, but handling noise and varying text orientations presents a significant challenge.
+
+## Why This Approach ⭐
+
+Before deep learning approaches like OCR Tesseract became ubiquitous, understanding the foundational algorithms of computer vision was essential. This project utilized the **Maximally Stable Extremal Regions (MSER)** algorithm, which is highly effective at finding text-like regions because letters typically have consistent colors and high contrast against their backgrounds.
+
+## Solution + Architecture
+
+- **Technology**: Implemented entirely in MATLAB.
+- **Algorithm**: Used the MSER algorithm for robust region detection, followed by geometric filtering to distinguish actual text from background noise.
+
+## Results / Impact
+
+- Achieved reliable text region detection on standard test images.
+- Formed a strong foundational understanding of low-level image processing, feature extraction, and traditional computer vision paradigms.

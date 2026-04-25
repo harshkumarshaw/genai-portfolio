@@ -1,69 +1,94 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { SectionHeading } from '@/components/ui/SectionHeading';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import styles from './About.module.css';
 
-export default function About() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
+function AnimatedCounter({ end, suffix = '', duration = 2000 }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+  useEffect(() => {
+    if (!isInView) return;
+    let start = 0;
+    const step = end / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [isInView, end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
+export default function About() {
+  const stats = [
+    { value: 10, suffix: '+', label: 'Production Systems Built' },
+    { value: 50, suffix: '%', label: 'Query Time Reduction (NL2BQ)' },
+    { value: 3, suffix: '', label: 'Active Research Domains' },
+    { value: 86, suffix: '%', label: 'ML Model Accuracy' },
+  ];
 
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
-        <SectionHeading title="About Me" subtitle="Philosophy & Approach" />
-        
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+        {/* Left: Statement */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className={styles.grid}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className={styles.statement}
         >
-          {/* Engineering Evolution */}
-          <motion.div variants={itemVariants} className={styles.card}>
-            <div className={styles.iconWrapper}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 className={styles.cardTitle}>Engineering Evolution</h3>
-            <p className={styles.cardText}>
-              I design full-scale AI systems, moving beyond training models to focus on orchestration, validation, and real-world deployment architecture.
-            </p>
-          </motion.div>
+          <span className={styles.eyebrow}>Philosophy & Approach</span>
+          <h2 className={styles.title}>
+            I don't just train models.
+            <br />
+            <span className={styles.titleAccent}>I architect systems.</span>
+          </h2>
+          <p className={styles.description}>
+            Moving beyond experimentation to production-grade AI infrastructure. 
+            Every project I ship is designed for real-world scale, validated against 
+            business metrics, and built to survive in production environments where 
+            "it works on my machine" isn't good enough.
+          </p>
+          <div className={styles.pillRow}>
+            <span className={styles.pill}>Orchestration Design</span>
+            <span className={styles.pill}>System Architecture</span>
+            <span className={styles.pill}>Production Validation</span>
+          </div>
+        </motion.div>
 
-          {/* Work Ethic */}
-          <motion.div variants={itemVariants} className={styles.card}>
-            <div className={styles.iconWrapper}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            </div>
-            <h3 className={styles.cardTitle}>Execution Style</h3>
-            <p className={styles.cardText}>
-              I am a self-driven builder who thrives on complex, parallel projects, prioritizing production-ready solutions over theoretical implementations.
-            </p>
-          </motion.div>
-
-          {/* Leadership & Education */}
-          <motion.div variants={itemVariants} className={styles.card}>
-            <div className={styles.iconWrapper}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <h3 className={styles.cardTitle}>Leadership & Foundation</h3>
-            <p className={styles.cardText}>
-              With a B.Tech in CSE (8.6 CGPA) and experience leading AICTE IDEA Lab initiatives, my engineering is grounded in rigorous CS fundamentals.
-            </p>
-          </motion.div>
+        {/* Right: Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+          className={styles.statsGrid}
+        >
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + i * 0.1 }}
+              className={styles.statCard}
+            >
+              <div className={styles.statValue}>
+                <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+              </div>
+              <div className={styles.statLabel}>{stat.label}</div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

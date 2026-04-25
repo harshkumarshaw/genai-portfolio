@@ -14,7 +14,7 @@
 
 .toggle:hover {
   border-color: var(--border-active);
-  box-shadow: 0 0 10px var(--glow-purple);
+  box-shadow: 0 0 10px var(--glow-amber);
 }
 
 .icon {

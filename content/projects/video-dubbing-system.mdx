@@ -1,0 +1,33 @@
+---
+title: "Generative Video Dubbing System"
+abstract: "Built a multimodal AI system for automated video dubbing with synchronized lip movement."
+date: "2023-05-01"
+---
+
+## Overview
+
+A foundational multimodal AI project focused on creating an unsupervised generative model capable of synchronizing audio with lip movements in video, enabling seamless, automated video dubbing.
+
+## Problem
+
+Manual video dubbing is labor-intensive and often results in noticeable audio-visual mismatches. Existing automated solutions frequently fail to map speech phonemes to accurate lip shapes, creating an uncanny and distracting viewer experience.
+
+## Why This Approach ⭐
+
+This project required the integration of two distinct AI sub-fields: Computer Vision and Audio Processing. By extracting Mel-frequency cepstral coefficients (MFCCs) from audio and using facial landmark detection (dlib), the system learns the complex mapping between speech features and physical mouth shapes.
+
+## Solution + Architecture
+
+- **Audio Processing**: Extracted audio features using MFCC and PyAudio.
+- **Computer Vision**: Utilized OpenCV and dlib for facial landmark detection and tracking.
+- **Deep Learning**: Implemented PyTorch and TorchVision models to generate synchronized frames.
+- **Full Stack Integration**: Built a Django-based web interface and an Android integration to make the model accessible to end users.
+
+## Results / Impact
+
+- Achieved an impressive **~95% lip-sync accuracy** on test datasets.
+- Successfully deployed as an end-to-end pipeline with both a web and mobile interface.
+
+## System Thinking Snapshot ⭐
+
+This project demonstrated the ability to not just train an isolated model, but to orchestrate a complete multimodal pipeline—from raw audio/video ingestion to feature extraction, generation, and full-stack deployment.

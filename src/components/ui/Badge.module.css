@@ -2,34 +2,21 @@
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.6rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  white-space: nowrap;
-  border: 1px solid transparent;
+  border-radius: 6px;
   font-family: var(--font-mono);
-}
-
-.default {
-  background-color: var(--bg-elevated);
-  color: var(--text-secondary);
-  border-color: var(--border-subtle);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .blue {
-  background-color: var(--accent-blue-glow);
-  color: var(--accent-blue);
-  border-color: var(--border-active);
-}
-
-.gold {
-  background-color: var(--accent-gold-glow);
-  color: var(--accent-gold);
-  border-color: rgba(240, 165, 0, 0.3);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-primary-light);
+  border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 .outline {
-  background-color: transparent;
-  border-color: var(--border-subtle);
+  background: transparent;
   color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
 }

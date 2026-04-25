@@ -70,13 +70,13 @@
 
 .markerStandard {
   background-color: var(--bg-primary);
-  border: 2px solid var(--accent-blue);
+  border: 2px solid var(--accent-primary);
 }
 
 .markerGold {
-  background-color: var(--accent-gold);
-  border: 2px solid var(--accent-gold);
-  box-shadow: 0 0 0 4px var(--bg-primary), 0 0 15px rgba(240, 165, 0, 0.4);
+  background-color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+  box-shadow: 0 0 0 4px var(--bg-primary), 0 0 15px rgba(245, 158, 11, 0.4);
 }
 
 .content {
@@ -84,11 +84,13 @@
   padding: var(--space-lg);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
-  transition: border-color var(--transition-base);
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .item:hover .content {
   border-color: var(--border-active);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
 .header {
@@ -114,13 +116,14 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--accent-blue);
-  background-color: var(--accent-blue-glow);
+  color: var(--accent-primary);
+  background-color: rgba(245,158,11,0.08);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius-sm);
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-primary);
